@@ -10,8 +10,8 @@ def client():
         yield client
 
 
-def test_hello(client):
-    """Vérifie que la page d'accueil répond bien 200 (OK) et contient 'Hello'"""
+def test_home_page(client):
     rv = client.get('/')
     assert rv.status_code == 200
-    assert b"Hello" in rv.data
+    # On vérifie maintenant si le titre de notre HTML est présent
+    assert b"Application DevOps" in rv.data

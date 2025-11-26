@@ -1,11 +1,13 @@
-from flask import Flask
+from flask import Flask, render_template
 
-app = Flask(__name__)
+# On dit à Flask où trouver les fichiers HTML (le dossier qu'on vient de créer)
+app = Flask(__name__, template_folder='templates')
 
 
 @app.route('/')
 def hello():
-    return "Hello World!"
+    # Au lieu de retourner du texte, on retourne le fichier HTML
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
