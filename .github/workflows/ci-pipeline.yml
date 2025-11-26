@@ -26,7 +26,7 @@ jobs:
 
   # --- LE JOB DE CONSTRUCTION (Modifié) ---
   build-and-push:
-    needs: test  # <--- IMPORTANT : On attend que 'test' soit fini et réussi
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -43,4 +43,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ton_pseudo/hello-devops:latest
+          tags: silax49/hello-devops:latest
