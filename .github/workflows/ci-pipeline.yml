@@ -27,4 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: SiLaX49/hello-devops:latest
+          tags: silax49/hello-devops:latest
