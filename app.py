@@ -6,7 +6,6 @@ app = Flask(__name__, template_folder='templates')
 
 @app.route('/')
 def hello():
-    # Au lieu de retourner du texte, on retourne le fichier HTML
     return render_template('index.html')
 
 
