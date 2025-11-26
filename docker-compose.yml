@@ -4,7 +4,7 @@ services:
   # Ton application
   mon-app:
     # Remplace par TON pseudo Docker Hub
-    image: ton_pseudo/hello-devops:latest
+    image: silax49/hello-devops:latest
     container_name: mon-projet-devops
     ports:
       - "5000:5000"
