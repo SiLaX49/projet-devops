@@ -27,5 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          # Remplace 'ton-user' par ton vrai pseudo Docker Hub
-          tags: ton-user/hello-devops:latest
+          tags: SiLaX49/hello-devops:latest
