@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  # Ton application
+  mon-app:
+    # Remplace par TON pseudo Docker Hub
+    image: ton_pseudo/hello-devops:latest
+    container_name: mon-projet-devops
+    ports:
+      - "5000:5000"
+    restart: always
+
+  # Le système de mise à jour (intégré au projet)
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    # Vérifie les mises à jour toutes les 30 secondes
+    command: --interval 30
+    depends_on:
+      - mon-app
